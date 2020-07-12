@@ -1,0 +1,4 @@
+<h1 id="page-title">My Thoughts</h1>
+<button id="new-thought" (submitted)="onSubmit()">New Thought</button>
+<ul><app-post [posts]="posts" (deleted)="onDelete($event)"></app-post></ul>
+<app-post-form [ngStyle]="{'display' : (formDisplay)? 'block': 'none'}"></app-post-form>
