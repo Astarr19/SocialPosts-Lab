@@ -1,6 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {Post} from '../app.component'
-import { PostComponent } from '../post/post.component';
 
 @Component({
   selector: 'app-social-posts',
@@ -21,7 +20,10 @@ export class SocialPostsComponent implements OnInit {
   ]
   
   onDelete = (el) => this.posts.splice(this.posts.indexOf(el), 1);
-  onSubmit = () => {
-    this.formDisplay = true;
+  toggleDisplay = () => (this.formDisplay === true)? this.formDisplay = false : this.formDisplay = true;
+  
+  onSubmit = (event) => {
+    this.toggleDisplay();
+    this.posts.unshift(event);
   }
 }

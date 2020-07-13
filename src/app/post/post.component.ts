@@ -16,6 +16,6 @@ export class PostComponent implements OnInit {
 
   @Input() posts: Post[];
 
-  @Output() deleted = new EventEmitter<boolean>();
-  deletePost = (): void => this.deleted.emit(true);
+  @Output() deleted = new EventEmitter<object>();
+  deletePost = (el): void => this.deleted.emit(el);
 }

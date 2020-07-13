@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Post } from '../app.component';
 
 @Component({
   selector: 'app-post-form',
@@ -15,13 +16,10 @@ export class PostFormComponent implements OnInit {
 
   title: string;
   thought: string;
+  @Input() posts: Post[];
 
 
-  @Output() submitted = new EventEmitter<boolean>();
-  submitPost = (f: NgForm) => {
-    this.title = f.value.title;
-    this.thought = f.value.thought;
-    this.submitted.emit(true)
-  }
+  @Output() submitted = new EventEmitter<object>();
+  submitPost = (f: NgForm) => this.submitted.emit({title: f.value.title, thought: f.value.thought});
 
 }

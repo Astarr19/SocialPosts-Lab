@@ -1,0 +1,21 @@
+* {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#page-title {
+    text-align: center;
+    width: 100%;
+}
+
+#new-thought {
+    margin: auto;
+    height: 30px;
+    text-align: center;
+}
+
+ul {
+    border: 1px solid black;
+    background-color: aquamarine;
+}

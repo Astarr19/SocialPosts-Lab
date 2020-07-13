@@ -1,0 +1,28 @@
+* {
+    margin: 10px;
+}
+form {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 25%;
+    bottom: 25%;
+    left: 15%;
+    right: 15%;
+    border: 1px solid black;
+    background-color: aqua;
+}
+
+input {
+    width: 95%;
+}
+
+#form-thought {
+    height: 30%;
+}
+
+button {
+    border-radius: 10px;
+    height: 10%;
+}
