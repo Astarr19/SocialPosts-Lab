@@ -1,0 +1,29 @@
+li {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+h3 {
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+button {
+    width: 5%;
+}
+
+#delete {
+    align-self: flex-end;
+    transform: translate(-100%, -400%);
+}
+
+#like {
+    align-self: flex-end;
+    transform: translate(-225%, -300%);
+}

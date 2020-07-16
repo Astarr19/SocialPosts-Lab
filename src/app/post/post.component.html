@@ -1,5 +1,7 @@
 <li *ngFor="let el of posts">
     <h2 id="post-title">{{el.title}}</h2>
     <h3 id="post-thought">{{el.thought}}</h3>
+    <h4>{{total}}</h4>
+    <app-like-counter></app-like-counter>
     <button id="delete" (click)="deletePost(el)"><img src="../assets/delete.svg"></button>
 </li>

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {Post} from '../app.component'
 
+
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
@@ -15,7 +16,9 @@ export class PostComponent implements OnInit {
 
 
   @Input() posts: Post[];
+  total: number[] = [];
 
   @Output() deleted = new EventEmitter<object>();
-  deletePost = (el): void => this.deleted.emit(el);
+  deletePost = (el: Post): void => this.deleted.emit(el);
+  
 }
